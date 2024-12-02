@@ -13,11 +13,6 @@
     <!-- babel script -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-    <script type="text/jsx">
-      const app = document.getElementById('app');
-      const root = ReactDOM.createRoot(app);
-      root.render(<h1>Do some cool stuff</h1>);
-    </script>
     <!-- chapter 3 exercise -->
     <!-- <script type="text/javascript">
       // grab app div
@@ -36,5 +31,31 @@
       // append the header(h1) to the app div
       app.appendChild(header);
     </script> -->
+
+    <!-- chapter 4 exercise -->
+    <!-- <script type="text/jsx">
+      const app = document.getElementById('app');
+      const root = ReactDOM.createRoot(app);
+      root.render(<h1>Do some cool stuff</h1>);
+    </script> -->
+
+    <!-- chapter 5 exercise -->
+    <script type="text/jsx">
+      const app = document.getElementById('app');
+
+      function Header() {
+        return (<h1>Do some cool stuff</h1>)
+      }
+
+      function HomePage(){
+        return (
+          <>
+            <Header />
+          </>)
+      }
+
+      const root = ReactDOM.createRoot(app);
+      root.render(<HomePage />)
+    </script>
   </body>
 </html>
