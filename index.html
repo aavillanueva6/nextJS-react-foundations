@@ -13,7 +13,7 @@
     <!-- babel script -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-    <!-- chapter 3 exercise -->
+    <!-- chapter 3 exercise - vanilla JS DOM manipulation-->
     <!-- <script type="text/javascript">
       // grab app div
       const app = document.getElementById('app');
@@ -32,14 +32,14 @@
       app.appendChild(header);
     </script> -->
 
-    <!-- chapter 4 exercise -->
+    <!-- chapter 4 exercise - basic react-->
     <!-- <script type="text/jsx">
       const app = document.getElementById('app');
       const root = ReactDOM.createRoot(app);
       root.render(<h1>Do some cool stuff</h1>);
     </script> -->
 
-    <!-- chapter 5 exercise -->
+    <!-- chapter 5 exercise - components -->
     <!-- <script type="text/jsx">
       const app = document.getElementById('app');
 
@@ -58,8 +58,8 @@
       root.render(<HomePage />)
     </script> -->
 
-    <!-- chapter 6 exercise -->
-    <script type="text/jsx">
+    <!-- chapter 6 exercise - props -->
+    <!-- <script type="text/jsx">
       const app = document.getElementById('app');
 
       function Header({title}) {
@@ -82,6 +82,39 @@
 
       const root = ReactDOM.createRoot(app);
       root.render(<HomePage />)
+    </script> -->
+
+    <!-- chapter 7 exercise - Intro to State -->
+    <script type="text/jsx">
+      const app = document.getElementById('app');
+
+      function Header({title}) {
+        return (<h1>{title ? title : 'Default title'}</h1>)
+      }
+
+      function HomePage(){
+        const names = ['Matt Painter', 'Gene Keady', 'George King'];
+        const [likes, setLikes] = React.useState(0);
+
+        function handleClick() {
+          console.log('someone liked this');
+          setLikes(likes + 1);
+        };
+
+        return (
+          <>
+            <Header title="Let's go Purdue Basketball!!!" />
+            <ul>
+              {names.map((name)=>(
+                <li key={name}>{name}</li>
+              ))}
+            </ul>
+            <button onClick={handleClick}>Like({likes})</button>
+          </>)
+      }
+
+      const root = ReactDOM.createRoot(app);
+      root.render(<HomePage />);
     </script>
   </body>
 </html>
