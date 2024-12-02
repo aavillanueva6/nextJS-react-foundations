@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nextJS react foundations tutorial</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="text/javascript">
+      // grab app div
+      const app = document.getElementById('app');
+
+      // create new h1 element
+      const header = document.createElement('h1');
+
+      // create a new text node to add to the header (h1)
+      const text = 'Do some cool stuff';
+      const headerContent = document.createTextNode(text);
+
+      // append the text node to the header(h1)
+      header.appendChild(headerContent);
+
+      // append the header(h1) to the app div
+      app.appendChild(header);
+    </script>
+  </body>
+</html>
