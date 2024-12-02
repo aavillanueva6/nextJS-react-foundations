@@ -40,7 +40,7 @@
     </script> -->
 
     <!-- chapter 5 exercise -->
-    <script type="text/jsx">
+    <!-- <script type="text/jsx">
       const app = document.getElementById('app');
 
       function Header() {
@@ -51,6 +51,32 @@
         return (
           <>
             <Header />
+          </>)
+      }
+
+      const root = ReactDOM.createRoot(app);
+      root.render(<HomePage />)
+    </script> -->
+
+    <!-- chapter 6 exercise -->
+    <script type="text/jsx">
+      const app = document.getElementById('app');
+
+      function Header({title}) {
+        return (<h1>{title ? title : 'Default title'}</h1>)
+      }
+
+      function HomePage(){
+        const names = ['Matt Painter', 'Gene Keady', 'George King']
+
+        return (
+          <>
+          <Header title="Let's go Purdue Basketball!!!" />
+          <ul>
+            {names.map((name)=>(
+              <li key={name}>{name}</li>
+            ))}
+          </ul>
           </>)
       }
 
