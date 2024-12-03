@@ -1,3 +1,26 @@
+import LikeButton from './like-button';
+
+function Header({ title }) {
+  return <h1>{title ? title : 'Default title'}</h1>;
+}
+
+export default function HomePage() {
+  const names = ['Matt Painter', 'Gene Keady', 'George King'];
+
+  return (
+    <div>
+      <Header title="Let's go Purdue Basketball!!!" />
+      <ul>
+        {names.map((name) => (
+          <li key={name}>{name}</li>
+        ))}
+      </ul>
+      <LikeButton />
+    </div>
+  );
+}
+
+/* // exercise 9
 'use client';
 import { useState } from 'react';
 
@@ -28,3 +51,4 @@ export default function HomePage() {
     </div>
   );
 }
+*/
